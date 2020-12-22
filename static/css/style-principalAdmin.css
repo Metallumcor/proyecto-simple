@@ -1,0 +1,101 @@
+h1{
+    text-align: center;
+    line-height: 1.5;
+    width: 100%;
+    padding: 0 0px 0 68px;    
+}
+h2{
+    text-align: right;
+    line-height: 1.5;
+    font-size:1rem;
+    width: 100%;
+    padding: 0 0rem 0 4.25rem;
+}
+p{
+    text-align: center;
+    font-family: Poppins-Medium;
+    font-size: 18px;
+    line-height: 1.5;
+    color: #666666;
+}
+/* Cajas */
+/* padding UP RI LOW LEF*/
+.page-header{
+    width: 85%;
+    position: absolute;
+    top: 5vh;
+    left: 8vw;
+    right: 14vw;   
+    background: #fff;
+    border-radius: 2em;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1.5vh 3rem 1.5vh 3rem;
+}
+.option-list-admin {
+    width: 27%;
+    background: #fff;
+    position: absolute;
+    top: 25vh;
+    left: 8vw;    
+    border-radius: 2em;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2em 1.5rem 2em 4rem;
+}
+.helpbox-admin{
+    width: 52.5%;
+    /*height: 600px;*/
+    position: absolute;
+    top: 25vh;
+    left: 40vw;    
+    background: #fff;
+    border-radius: 2em;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 3em 3rem 3em 4rem;
+}
+/* Texto */
+/* padding UP RI LOW LEF*/
+.first-tier-list{
+    font-family: Poppins-Bold;
+    font-size: 18px;
+    color: #333333;
+    line-height: 1.3;
+    text-align: left;
+    width: 100%;
+    display: block;
+    padding: 0em 3rem 0em 0rem;
+    padding-left: 4em;
+}
+
+.second-tier-list{
+    font-family: Poppins-Bold;
+    font-size: 16px;
+    color: #333333;
+    line-height: 1.3;
+    text-align: left;
+    width: 100%;
+    display: block;
+    padding-left: 1em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;        
+}
+
+img.izquierda {
+    float: left;
+    height: 120px;
+    width: 120px;
+}
+
+img.derecha {
+    float: right;
+    height: 120px;
+    width: 130px;
+}

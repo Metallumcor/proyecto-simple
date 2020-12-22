@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interfaz principal - Administrador</title>
+    <script src="{{ url_for('static',filename='JavaScript/inicioSesion.js')}}">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/main.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/fonts.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/utils.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style-principalAdmin.css') }}">
+</head>
+<body>
+    <div class = "limiter">
+        <div class = "content-container">
+            <div class="page-header">
+                <h1>Bienvenido {{ session['username'] }}</h1>
+                <h2><script>DameLaFechaHora();</script></h2>
+                <a href="{{url_for('login')}}">Cerrar sesión</a>
+            </div>
+            <div class = "option-list-admin">
+                <span class = "first-tier-list">
+                    <ul>
+                        <li>
+                            Menú de productos
+                        </li>    
+                            <span class= "second-tier-list">
+                                <ul>
+                                    <li>
+                                        <a href="{{url_for('product')}}" >Productos</a>
+                                    </li>
+                                </ul>
+                            </span>
+                        <li>
+                            Menú de empleados
+                        </li>
+                            <span class = "second-tier-list">  
+                                <ul>
+                                    <li>
+                                        <a href="{{url_for('users')}}">Empleados</a>
+                                    </li>
+                                </ul>    
+                            </span>    
+                    </ul>    
+                </span>
+            </div>
+
+            <div class = "helpbox-admin">
+                <div>
+                    <p><img src="{{url_for('static',filename='images/Logo_Uninorte.png')}}" class="izquierda">
+                       <img src="{{url_for('static',filename='images/Logo_misionTIC.png')}}" class="derecha"><br>
+                    <h1>Universidad del Norte Mision TIC 2020</h1></p>
+                </div>
+                <h3>
+                    <br>
+                    CICLO 3 - Desarrollo de software<br><br>
+                    Docente: Karen Milena Gomez Quiroz<br><br>
+                    Integrantes: <br>
+                    - David Pineda<br>
+                    - Deizy Rivera<br>
+                    - Angie Rodriguez<br>
+                    - Sara Medina<br>
+                    - Paula Rivera<br>
+                    - Giovanni Ardila<br>
+                </h3>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

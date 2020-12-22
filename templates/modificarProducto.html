@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modificar producto</title>
+    <script src="{{ url_for('static',filename='JavaScript/inicioSesion.js')}}">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/main.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/fonts.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/utils.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style-producto.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
+    <link rel="stylesheet" href="CSS/fonts.css">
+</head>
+<body>
+    <div class = "limiter">
+        <div class = "content-container">
+            <div class="page-header">
+                <h1>Bienvenido {{ session['username'] }}</h1>
+                <h2><script>DameLaFechaHora();</script></h2>
+                <h3>
+                    {% for message in get_flashed_messages()%}
+                        <div>{{ message }}</div>
+                    {% endfor %}
+                </h3>
+            </div>            
+   
+            <div class="wrap-content">
+                <form class="product-form-add" enctype="multipart/form-data" action="{{ url_for("mod_product",idPro=product[0]) }}" method="POST" id="form">
+
+                    <label for="productId">Referencia</label>
+                    <div class="wrap-inputs">
+                        <input class="inputs" type="number" name="productId" id="productId"
+                        placeholder="2" value="{{ product[1] }}" ALT="descripcion">
+                    </div>
+ 
+                    <label for="productName">Nombre del producto</label>            
+                    <div class="wrap-inputs">
+                        <input class="inputs" type="text" name="productName" id="productName"
+                        placeholder="Cappuccino" value="{{ product[2] }}" ALT="descripcion">
+                    </div>
+
+                    <label for="productQuantity">Cantidad</label>
+                    <div class="wrap-inputs">
+                        <input class="inputs" type="number" name="productQuantity" id="productQuantity"
+                        placeholder="10" value="{{ product[3] }}" ALT="descripcion">
+                    </div>                  
+
+                    <label for="productDescription">Descripción</label>
+                    <div class="wrap-inputs">
+                        <input class="inputs" type="text" name="productDescription" id="productDescription"
+                        placeholder="Café expreso con leche a vapor" ALT="descripcion" value="{{ product[4] }}">
+                    </div>                  
+                    <div>
+                        <input class="buttons" type="submit" value="Modificar">
+                    </div>
+                </form>
+                <div class="wrap-product-image">
+                    <span class="container-product-image">
+                        {% if not product[5] == None %}
+                            <img class="product-img" src="{{ url_for('static',filename='images/productos/'+product[6]) }}" alt="imagen producto">
+                        {% else %}
+                            <img class="product-img" src="{{ url_for('static',filename='images/img-01.png') }}" alt="imagen producto">
+                        {% endif %}
+                    </span>
+                    <div class="container-button-inblock">
+                        <input type="file"  id="file" name="file" style="display: none;" form="form">
+                        <input class="button-image" type="button" value="Subir imagen" form="form"
+                               onclick="document.getElementById('file').click();" />
+                    </div>
+
+
+                    <form  action="{{ url_for('delete_product', idPro=product[1]) }}" method="POST">
+                        <div>
+                            <input class="buttons" type="submit" value="Eliminar">
+                        </div>
+                    </form>
+
+                </div>
+            </div>             
+        </div>
+        <div class="wrap-button">
+            <div class="container-button">
+                <button class="buttons" type="button" onclick="location.href='{{url_for('product')}}'">ATRAS</button>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

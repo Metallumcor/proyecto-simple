@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de sesión</title>
+    <script src="{{ url_for('static',filename='JavaScript/inicioSesion.js')}}">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/main.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/fonts.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/utils.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style-login.css') }}">
+</head>
+<body>
+
+    <div class = "limiter">
+        <div class = "content-container">
+            <div class ="wrap-login">
+                <div class="login-pic">
+                    <img src="{{ url_for('static',filename='images/img-02.jpeg') }}">
+                </div>
+
+                <form method="POST" class="login-form" name="formulario" action="{{ url_for("login") }}" onsubmit="validacion();">
+					<span class="login-form-title">
+						Ingrese su usuario
+                    </span>
+                    <div>
+                        {% for message in get_flashed_messages()%}
+                            <div>{{ message }}</div>
+                        {% endfor %}
+                    </div>
+
+                    <div class="wrap-inputs">
+                        <input class="inputs" type="text" name="usuario" id="usuario" placeholder="Nombre de usuario">
+                    </div>
+                    <div class="wrap-inputs">
+                        <input class="inputs" type="password" name="password" id="password"
+                        placeholder="Contraseña">
+                        <img src="{{ url_for('static', filename='images/eye.png') }}" width = 40px height=30px onmouseover="mostrarPassword();" onmouseout="ocultarPassword();">
+                    </div>
+                    <div class="container-login-form-btn">
+                        <input class="login-form-btn" type="submit" name ="Ingreso" id="buttonLogin" value="Ingresar">
+                    </div>
+                    <div class="text-center">
+                        <a class="message" href="{{ url_for('forgot') }}">¿Olvidó su contraseña?</a>
+                    </div>
+                </form>
+            </div>           
+        </div>
+    </div>
+</body>
+</html>

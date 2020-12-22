@@ -1,0 +1,180 @@
+h1{
+    text-align: center;
+    line-height: 1.5;
+    width: 100%;
+    padding: 0 0rem 0 4.25rem;    
+}
+h2{
+    text-align: right;
+    line-height: 1.5;
+    font-size:1rem;
+    width: 100%;
+    padding: 0 0rem 0 4.25rem;
+}
+
+p{
+    text-align: justify;
+    font-family: Poppins-Medium;
+    font-size: 1.125rem;
+    line-height: 1.5;
+    color: #666666;
+}
+/* Cajas */
+/* padding UP RI LOW LEF*/
+.page-header{
+    width: 85%;
+    position: absolute;
+    top: 5vh;
+    left: 8vw;
+    right: 14vw;   
+    background: #fff;
+    border-radius: 2em;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1.5vh 3rem 1.5vh 3rem;
+}
+.option-list-admin {
+    width: 27%;
+    background: #fff;
+    position: absolute;
+    top: 25vh;
+    left: 8vw;    
+    border-radius: 2em;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2em 1.5rem 2em 4rem;
+}
+.helpbox-admin{
+    width: 52.5%;
+    /*height: 600px;*/
+    position: absolute;
+    top: 25vh;
+    left: 40vw;    
+    background: #fff;
+    border-radius: 2rem;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 3rem 0rem 3rem 4rem;
+}
+/* Texto */
+/* padding UP RI LOW LEF*/
+.first-tier-list{
+    font-family: Poppins-Bold;
+    font-size: 18px;
+    color: #333333;
+    line-height: 1.3;
+    text-align: center;
+    width: 100%;
+    display: block;
+    padding: 0em 3rem 0em 0rem;
+}
+
+.second-tier-list{
+    font-family: Poppins-Bold;
+    font-size: 16px;
+    color: #333333;
+    line-height: 1.3;
+    text-align: center;
+    width: 100%;
+    display: block;
+    padding-left: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;        
+}
+.form-control{
+    border-radius: 0.313rem;
+    background-color: #fff;
+    border: 0.063rem solid rgb(215, 234, 255);
+}
+.btnbtn-primary{
+    position: relative;
+    font-family:Poppins-Medium ;
+    display: inline-block;
+    background-color: #00b4cb;
+    border-radius: 10rem;
+    border: 0.25rem double #f1f4fc;
+    color: #ebebff;
+    text-align: center;
+    font-size: 0.75rem;
+    padding: 0.438rem 0.25rem;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 0.25rem;
+}
+.button-image {
+    font-family: Montserrat-Bold;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #fff;
+    text-transform: uppercase;
+  
+    width: 100%;
+    height: 2em;
+    border-radius: 2em;
+    background: #00B4CC;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    padding: 0em 0rem 0rem 0em;
+}
+.wrap-product-image{
+    width: 50%;
+    padding: 3rem 5rem 2rem 3em;
+}
+.container-product-image {
+    width: 250px;
+    height: 160px;
+    position: absolute;
+    display: block;
+    border-radius: 1em;
+    background-color: #e6e6e6;    
+    justify-content: center;
+    padding-top: 0em;
+    padding-left: 3em;
+    padding-right: 1.5em;
+    
+}
+.product-img{
+    width: 150px;
+    height: 150px;
+    padding: 0 0rem 0 0rem;
+}
+
+
+.wrap-inputs {
+    position: relative;
+    width: 50%;
+    z-index: 1;
+    margin-bottom: 0em;
+}
+
+.inputs {
+    font-family: Poppins-Medium;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #666666;
+  
+    display: block;
+    background: #e6e6e6;
+    height: 2em;
+    border-radius: 2em;
+    padding: 0 0em 0 1em;
+}
+.product-form-add{
+    width: 50%;
+    position: relative;
+    padding: 2em 3rem 2rem 3em;
+}
+.container-button-inblock {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2rem 5rem 0 4.25rem;
+}

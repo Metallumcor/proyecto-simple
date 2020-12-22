@@ -1,0 +1,271 @@
+h1{
+    text-align: center;
+    line-height: 1.5;
+    width: 100%;
+    padding: 0 0px 0 68px;    
+}
+h2{
+    text-align: right;
+    line-height: 1.5;
+    font-size:1rem;
+    width: 100%;
+    padding: 0 0rem 0 4.25rem;
+}
+.button-add {
+    font-family: Montserrat-Bold;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #fff;
+    text-transform: uppercase;
+  
+    width: 80%;
+    height: 5em;
+    border-radius: 2em;
+    background: #00B4CC;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+.button-mod {
+    font-family: Montserrat-Bold;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #fff;
+    text-transform: uppercase;
+  
+    width: 80%;
+    height: 3em;
+    border-radius: 2em;
+    background: #00B4CC;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+.button-image {
+    font-family: Montserrat-Bold;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #fff;
+    text-transform: uppercase;
+  
+    width: 100%;
+    height: 2em;
+    border-radius: 2em;
+    background: #00B4CC;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+.button-image:hover{
+    cursor: pointer;
+    background: #02d0ec;
+    box-shadow: 0px 5px 5px #b2bec3;
+}
+
+.buttons-image:active{
+    background: #00B4CC;
+    border: #333333;
+}
+
+.container-button {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 0rem 0 4.25rem;
+}
+
+.container-button-inblock {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 0rem 0 4.25rem;
+}
+
+
+.container-product-image {
+    width: 250px;
+    height: 160px;
+    display: block;
+    border-radius: 1em;
+    background-color: #e6e6e6;    
+    justify-content: center;
+    padding-top: 0em;
+    padding-left: 3em;
+    padding-right: 1.5em;
+}
+.product-img{
+    width: 150px;
+    height: 150px;
+    padding: 0 0rem 0 0rem;
+}
+
+.page-header{
+    width: 85%;
+    position: absolute;
+    top: 5vh;
+    left: 8vw;
+    right: 14vw;   
+    background: #fff;
+    border-radius: 2em;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 1.5vh 3rem 1.5vh 3rem;
+}
+.product-form-add{
+    width: 50%;
+    position: relative;
+    padding: 2em 3rem 2rem 3em;
+}
+.product-form-image{
+    width: 100%;
+    position: relative;
+    padding: 2em 0rem 2rem 0em;
+}
+.search {
+    width: 100%;
+    position: relative;
+    display: flex;
+}
+  
+.search-Term {
+    width: 100%;
+    border: 0.3em solid #00B4CC;
+    border-right: none;
+    padding: 0.5em;
+    height: 3.5em;
+    font-size: 18px;
+    border-radius: 1em 0 0 1em;
+    outline: none;
+    color: #9DBFAF;
+}
+  
+.search-Term:focus{
+    color: #00B4CC;
+}
+  
+.search-Button {
+    width: 3.5em;
+    height: 3.5em;
+    border: 0.3em solid #00B4CC;
+    background: #00B4CC;
+    text-align: center;
+    color: #fff;
+    border-radius: 0 1em 1em 0;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.inputs {
+    font-family: Poppins-Medium;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #666666;
+  
+    display: block;
+    background: #e6e6e6;
+    height: 2em;
+    border-radius: 2em;
+    padding: 0 0em 0 1em;
+}
+
+.wrap-button-add{
+    width: 40%;
+    position: absolute;
+    top: 50vh;
+    left: 7vw;
+}
+
+.wrap-button-mod{
+    width: 40%;
+    position: absolute;
+    top: 40vh;
+    left: 7vw;
+}
+
+.wrap-search{
+    width: 30%;
+    position: absolute;
+    top: 25vh;
+    left: 8vw;
+    /*transform: translate(-50%, -50%);*/   
+}
+
+.wrap-content{
+    width: 53%;
+    position: absolute; 
+    top: 25vh;
+    left: 40vw;
+    background: #fff;
+    border-radius: 2em;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.wrap-inputs {
+    position: relative;
+    width: 50%;
+    z-index: 1;
+    margin-bottom: 2em;
+}
+
+.wrap-inputs-image {
+    position: relative;
+    width: 0%;
+    margin-bottom: 2em;
+}
+
+.wrap-product-image{
+    width: 50%;
+    padding: 3em 5rem 2rem 3em;
+}
+
+.wrap-button{
+    width: 40%;
+    position: absolute;
+    top: 38vh;
+    left: 7vw;
+}
+
+.container-button {
+    width: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 2vh 3rem 2vh 5rem;
+}
+
+.buttons {
+    font-family: Montserrat-Bold;
+    font-size: 20px;
+    line-height: 1.5;
+    color: #fff;
+    text-transform: uppercase;
+
+    width: 80%;
+    height: 3em;
+    border-radius: 2em;
+    background: #00B4CC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.buttons:hover{
+    cursor: pointer;
+    background: #02d0ec;
+    box-shadow: 0px 5px 5px #b2bec3;
+}
+
+.buttons:active{
+    background: #00B4CC;
+    border: #333333;
+}

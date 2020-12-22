@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Editar Cantidad Producto</title>
+    <script src="{{ url_for('static',filename='JavaScript/inicioSesion.js')}}">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/main.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/fonts.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/utils.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style-editarCantidadProducto.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
+</head>
+<body>
+    <div class = "limiter">
+        <div class = "content-container">
+            <div class="page-header">
+                <h1>Bienvenido {{ session['username'] }}</h1>
+                <h2><script>DameLaFechaHora();</script></h2>
+                <h3>
+                    {% for message in get_flashed_messages()%}
+                        <div>{{ message }}</div>
+                    {% endfor %}
+                </h3>
+            </div>
+
+            <div class="wrap-content">
+                <form class="product-form-add" action={{ url_for('editProduct', idPro=product[0]) }} method="POST">
+
+                    <label for="productId">Referencia</label>
+                    <div class="wrap-inputs">
+                        <fieldset disabled>
+                            <input class="inputs" type="number" name="productId" id="productId"
+                            placeholder="Eg. 13211" value="{{ product[1] }}">
+                        </fieldset> 
+                    </div>
+ 
+                    <label for="productName">Nombre del producto</label>            
+                    <div class="wrap-inputs">
+                        <fieldset disabled> 
+                            <input class="inputs" type="text" name="productName" id="productName"
+                            placeholder="Eg. Té de hierbas" value="{{ product[2] }}">
+                        </fieldset>  
+                    </div>
+
+
+                    <label for="productQuantity">Cantidad</label>
+                    <div class="wrap-inputs">
+                        <input class="inputs" type="number" name="productQuantity" id="productQuantity"
+                        placeholder="Eg. 10" value="{{ product[3] }}">
+                    </div>                  
+
+                        <div class="container-button-inblock">
+                            <input class="button-image" type="submit" value="Actualizar"/>
+                        </div>
+                              
+                    
+                </form>
+                <div class="wrap-product-image">
+                    <span class="container-product-image">
+                        {% if not product[5] == None %}
+                            <img class="product-img" src="{{ url_for('static',filename='images/productos/'+product[6]) }}" alt="imagen producto">
+                        {% else %}
+                            <img class="product-img" src="{{ url_for('static',filename='images/img-01.png') }}" alt="imagen producto">
+                        {% endif %}
+                    </span>
+                    <label for="productDescription">Descripción</label>
+                    <div class="wrap-inputs">
+                        <fieldset disabled> 
+                            <input class="inputs" type="text" name="productDescription" id="productDescription"
+                            placeholder="Té de aromaticas" value="{{ product[4] }}">
+                        </fieldset> 
+                    </div>    
+                    
+                </div>
+            </div>             
+        </div>
+        <div class="wrap-button-mod">
+            <div class="container-button">
+                <button class="buttons" type="button" onclick="location.href='{{url_for('employee')}}'">ATRAS</button>
+            </div>          
+        </div>
+    </div>
+</body>
+</html>

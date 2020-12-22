@@ -1,0 +1,111 @@
+/* Componente especifico */
+a {
+	font-family: Poppins-Regular;
+	font-size: 14px;
+	line-height: 1.7;
+	color: cornflowerblue;
+	margin: 0px;
+}
+
+textarea {
+    outline: none;
+    border: none;
+}
+/* Cajas */
+/* padding UP RI LOW LEF*/
+.wrap-login {
+    width: 960px;
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 100px 130px 100px 95px;
+}
+/* ------------ */
+.login-pic {
+    width: 316px;
+}
+
+.login-pic img {
+  max-width: 100%;
+}
+/* ------------ */
+.login-form {
+    width: 290px;
+}
+  
+.login-form-title {
+    font-family: Poppins-Bold;
+    font-size: 24px;
+    color: #333333;
+    line-height: 1.2;
+    text-align: center;
+  
+    width: 100%;
+    display: block;
+    padding-bottom: 54px;
+}
+/* ------------ */  
+.wrap-inputs {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    margin-bottom: 10px;
+}
+  
+.inputs {
+    font-family: Poppins-Medium;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #666666;
+  
+    display: block;
+    width: 100%;
+    background: #e6e6e6;
+    height: 50px;
+    border-radius: 25px;
+    padding: 0 30px 0 68px;
+}
+
+/* ------------ */  
+.container-login-form-btn {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 20px;
+}
+  
+.login-form-btn {
+    font-family: Montserrat-Bold;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #fff;
+    text-transform: uppercase;
+  
+    width: 100%;
+    height: 50px;
+    border-radius: 25px;
+    background: #57b846;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 25px;   
+}
+
+.login-form-btn:hover{
+    cursor: pointer;
+    background: #5ad650;
+    box-shadow: 0px 5px 5px #b2bec3;
+}
+
+.login-form-btn:active{
+    background: #57b846;
+    border: #333333;
+}
+
+
+
+  

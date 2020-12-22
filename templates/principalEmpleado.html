@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Principal - Usuario(Empleado)</title>
+    <script src="{{ url_for('static',filename='JavaScript/inicioSesion.js')}}">
+    </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/main_empleado.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/fonts.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/utils.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/style-principalEmpleado.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='css/fonts/font-awesome-4.7.0/css/font-awesome.min.css')}}">
+</head>
+<body>
+    <div class = "limiter">
+        <div class = "content-container">
+            <div class="page-header">
+                <h1>Bienvenido {{ session['username'] }}</h1>
+                <h2><script>DameLaFechaHora();</script></h2>
+                 <a href="{{url_for('login')}}">Cerrar sesión</a>
+            </div>
+
+            <div class="wrap-search">
+                <form action="{{ url_for('employee') }}" method="POST">
+                    <div class="search">
+                        <input type="search" class="search-Term" id = "productSearch" name = "search"
+                        placeholder="Buscar...">
+                        <button type="submit" class="search-Button" id = "doSearch">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+                </form>
+            </div>
+            
+            <section class="product-list">
+                <div>
+                    <h1 class="centrar">Productos en stock</h1>
+                </div>
+                <div class="product-container">
+                    {% for pro in productos %}
+                        <div class = "card">
+                            <div class="title">{% print(pro[2]) %}</div>
+                            <div class="image">
+                                <a id="{{ pro[0] }}" href="{{ url_for('editProduct', idPro=pro[0]) }}" >
+                                    {% if not pro[5] == None %}
+                                        <img src="{{ url_for('static',filename='images/productos/'+pro[6]) }}" alt="imagen producto">
+                                    {% else %}
+                                        <img src="{{ url_for('static',filename='images/img-01.png') }}" alt="imagen producto">
+                                    {% endif %}
+                                </a>
+                            </div>
+                            <div class="text">Cantidad : {% print(pro[3]) %}</div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
